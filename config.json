@@ -1,0 +1,14 @@
+{
+  "Url": "http://localhost:4321",
+  "Browser": "Firefox",
+  "Environment": "P1212510",
+  "Language": "pt-br",
+  "User": "ADMIN",
+  "Password": "adminP12@@",
+  "Headless": true,
+  "POUILogin": false,
+  "NewLog": true,
+  "MotExec": "HOMOLOGAÃ‡ÃƒO_TIR",
+  "ExecId": "20201007",
+  "LogUrl1": "http://localhost:8198/log/"
+}

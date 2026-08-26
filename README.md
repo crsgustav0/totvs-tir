@@ -2,46 +2,149 @@
 
 Projeto desenvolvido focado nos testes automatizados via TIR a partir da Universidade TOTVS
 
-- Validação de funcionamento de customizações;
-- Manutenção e inovações usados para novos desenvolvimentos;
-- Documentação de processos de testes;
+- Validaï¿½ï¿½o de funcionamento de customizaï¿½ï¿½es;
+- Manutenï¿½ï¿½o e inovaï¿½ï¿½es usados para novos desenvolvimentos;
+- Documentaï¿½ï¿½o de processos de testes;
 
-### Automação de testes
+### Automaï¿½ï¿½o de testes
 
-Uso de software para controle e configuração de testes, iniciando de uma rotina já existente e otimizando o processo de execução, reduzindo o tempo de homologação e garantindo o funcionamento da rotina.
+Uso de software para controle e configuraï¿½ï¿½o de testes, iniciando de uma rotina jï¿½ existente e otimizando o processo de execuï¿½ï¿½o, reduzindo o tempo de homologaï¿½ï¿½o e garantindo o funcionamento da rotina.
 
-### Otimização do processo
+### Otimizaï¿½ï¿½o do processo
 
 Considerando o processo de testes como um todo, sendo:
 
 - Caso de testes;
 - Setup de dados;
 - Teste Manual;
-- **Automação de testes; - (Exec. dos testes)**
-- **Análise de resultados. (Exec. dos testes)**
+- **Automaï¿½ï¿½o de testes; - (Exec. dos testes)**
+- **Anï¿½lise de resultados. (Exec. dos testes)**
 
-### Características TIR
+### Caracterï¿½sticas TIR
 
-TOTVS INTERFACE ROBOT é um framework desenvolvimento em Python, criando script testes, baseado em Selenium, em interface Web e justamente fazendo a integração com o WebApp do Protheus.
+TOTVS INTERFACE ROBOT ï¿½ um framework desenvolvimento em Python, criando script testes, baseado em Selenium, em interface Web e justamente fazendo a integraï¿½ï¿½o com o WebApp do Protheus.
 
 Vantagens e motivos para uso:
 
-- **Classe Protheus** - Classe criada e mantida pela TOTVS com suporte a funções, componentes do Protheus;
-- **Execução** - Execução em navegador e headless;
-- **Autonomia** - Autonomia e independência na execução dos testes.
-- **Tempo de execução** - Redução do tempo e custo em processo de homologação.
+- **Classe Protheus** - Classe criada e mantida pela TOTVS com suporte a funï¿½ï¿½es, componentes do Protheus;
+- **Execuï¿½ï¿½o** - Execuï¿½ï¿½o em navegador e headless;
+- **Autonomia** - Autonomia e independï¿½ncia na execuï¿½ï¿½o dos testes.
+- **Tempo de execuï¿½ï¿½o** - Reduï¿½ï¿½o do tempo e custo em processo de homologaï¿½ï¿½o.
 - **Cobertura** - Maior cobertura escopo de testes.
 
-## Instalação
+## Instalaï¿½ï¿½o
 
-- Instalação Python e TIR
-  [Instalação Python e TIR](00.Configuracao/README.md)
+- Instalaï¿½ï¿½o Python e TIR
+  [Instalaï¿½ï¿½o Python e TIR](00.Configuracao/README.md)
 
-### Referências
+- Instalaï¿½ï¿½o Extensï¿½o Python VSCode: **Necessï¿½rio para execuï¿½ï¿½o dos scripts**
+
+![alt text](src/image-1.png)
+
+## Templates TIR
+
+- Download repositï¿½rio arquivos
+  [TOTVS TIR Samples](https://github.com/totvs/tir-script-samples)
+
+Copiado o projeto baixado a partir de samples para o diretï¿½rio do projeto.
+
+![alt text](src/image.png)
+
+![alt text](src/image-2.png)
+
+#### Testes
+
+Feito a criaï¿½ï¿½o do diretï¿½rio para os testes da rotina padrï¿½o **"MATA030 - Cadasstro Cliente"** e salvas em um diretï¿½rio especifico do projeto.
+
+- Download e configuraï¿½ï¿½o [TOTVS WebApp](https://tdn.totvs.com/display/tec/WebApp+-+Configurando+nativamente+o+Application+Server+como+servidor+Web)
+
+![alt text](src/image-3.png)
+
+NecessÃ¡rio somente realizar as alteraÃ§Ãµes de acordo com o seu ambiente:
+
+VersÃ£o inicial:
+
+```json
+{
+  "Url": "http://localhost:2023",
+  "Browser": "Firefox",
+  "Environment": "ENVIRONMENT",
+  "Language": "pt-br",
+  "User": "ADMIN",
+  "Password": "1234",
+  "Headless": true,
+  "POUILogin": false,
+  "NewLog": true,
+  "MotExec": "HOMOLOGAÃƒâ€¡ÃƒÆ’O_TIR",
+  "ExecId": "20201007",
+  "LogUrl1": "http://localhost:8198/log/"
+}
+```
+
+VersÃ£o final:
+
+```json
+{
+  "Url": "http://localhost:4321",
+  "Browser": "Firefox",
+  "Environment": "P1212510",
+  "Language": "pt-br",
+  "User": "ADMIN",
+  "Password": "adminP12@@",
+  "Headless": true /*Define a exibiÃ§Ã£o do Browser durante os testes*/,
+  "POUILogin": false,
+  "NewLog": true,
+  "MotExec": "HOMOLOGAÃƒâ€¡ÃƒÆ’O_TIR",
+  "ExecId": "20201007",
+  "LogUrl1": "http://localhost:8198/log/"
+}
+```
+
+Arquivos:
+
+- **TESTSUITE** - ConfiguraÃ§Ã£o trilha de testes.
+
+- **TESTCASE** - DefiniÃ§Ã£o parÃ¢metros para cada trilha de testes, instÃ¢ncia e preparaÃ§Ã£o de ambientes como MÃ³dulos, Filial e Rotina.
+- **test_MATA030_CT133** - Script de testes inicial, podendo ser alterado.
+- **test_MATA030_CT133_1** - Script de testes com manipulaÃ§Ã£o de valores.
+
+Testes via CMD:
+
+![alt text](src/image-4.png)
+
+### DefiniÃ§Ã£o valores via testes automatizados
+
+Variando de acordo com a necessidade do script de testes Ã© possÃ­vel realizar a manipulaÃ§Ã£o de valores e botÃµes das rotinas, sendo:
+
+- **SetButtton** - DefiniÃ§Ã£o de botÃ£o como "Incluir" podendo ter mais de uma instruÃ§Ã£o como 'Outras AÃ§Ãµes','Outros',"Importar";
+- **SetValue** - DefiniÃ§Ã£o valor campo via DescriÃ§Ã£o ou campo Protheus como "C5_TIPO".
+  - **grid=true** - DefiniÃ§Ã£o valor campo via grid, sendo via DescriÃ§Ã£o ou campo Protheus como "C5_TIPO".
+  - **self.oHelper.LoadGrid()** - NecessÃ¡rio para o carregamento dos valores definidos via grid.
+
+![alt text](src/image-5.png)
+
+![alt text](src/image-6.png)
+
+![alt text](src/image-7.png)
+
+- **SearchBrowse** - DefiniÃ§Ã£o e atribuiÃ§Ã£o valor pesquisa Protheus ou Ã­ndice para posicionamento de registros, sendo informado pela chave por extenso ou nÃºmero do Ã­ndice, como exemplo:
+- **Filial+Codigo+Loja** ou **"1"** - Referente ao Ãndice 1.
+
+![alt text](src/image-8.png)
+
+![alt text](src/image-9.png)
+
+---
+
+### Referï¿½ncias
 
 **Test Interface Robot?**: https://totvs.github.io/tir/
 **GitHub TOTVS TIR**: https://github.com/totvs/tir
 **GitHub TOTVS TIR Samples**: https://github.com/totvs/tir-script-samples
+
+**TOTVS WebApp**: https://tdn.totvs.com/display/tec/WebApp+-+Configurando+nativamente+o+Application+Server+como+servidor+Web
+
+**Chrome for Testing availability**: https://googlechromelabs.github.io/chrome-for-testing/#stable
 
 ---
 
